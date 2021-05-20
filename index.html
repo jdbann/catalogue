@@ -7,5 +7,9 @@ title: "Home"
 {% for game in site.data.games %}
   <section>
     <h2>{{ game.name }}</h2>
+    {% if game.image != empty %}
+    <image src="{{ game.image | relative_url }}"/>
+    {% endif %}
+    {{ game.description }}
   </section>
 {% endfor %}
