@@ -1,0 +1,11 @@
+---
+label: Games List
+hide_body: true
+fields:
+- type: field_group_list
+  name: Games
+  label: Games
+  fields:
+  - type: text
+    name: name
+    label: name
