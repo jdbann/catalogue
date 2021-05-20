@@ -1,2 +1,7 @@
+---
 - name: Mörk Borg
+  image: "/uploads/upload-e1726104-a8b0-4213-b2c8-67c5b7d218e5.jpg"
+  description: ''
 - name: Mausritter
+  image: ''
+  description: ''
