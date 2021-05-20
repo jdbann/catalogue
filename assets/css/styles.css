@@ -1,0 +1,459 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none; }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+/* @link https://utopia.fyi/space/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6, */
+:root {
+  --fc-3xs-min: (var(--fc-s-min) * 0.25);
+  --fc-3xs-max: (var(--fc-s-max) * 0.25);
+  --fc-2xs-min: (var(--fc-s-min) * 0.5);
+  --fc-2xs-max: (var(--fc-s-max) * 0.5);
+  --fc-xs-min: (var(--fc-s-min) * 0.75);
+  --fc-xs-max: (var(--fc-s-max) * 0.75);
+  --fc-s-min: (var(--f-0-min));
+  --fc-s-max: (var(--f-0-max));
+  --fc-m-min: (var(--fc-s-min) * 1.5);
+  --fc-m-max: (var(--fc-s-max) * 1.5);
+  --fc-l-min: (var(--fc-s-min) * 2);
+  --fc-l-max: (var(--fc-s-max) * 2);
+  --fc-xl-min: (var(--fc-s-min) * 3);
+  --fc-xl-max: (var(--fc-s-max) * 3);
+  --fc-2xl-min: (var(--fc-s-min) * 4);
+  --fc-2xl-max: (var(--fc-s-max) * 4);
+  --fc-3xl-min: (var(--fc-s-min) * 6);
+  --fc-3xl-max: (var(--fc-s-max) * 6);
+  /* T-shirt sizes */
+  --space-3xs: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-3xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+  --space-2xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+  --space-xs: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
+  --space-s: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+  --space-m: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+  --space-l: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+  --space-xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+  --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+  --space-3xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-3xl-min)) * var(--fluid-bp)); }
+
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  ); }
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px); } }
+:root {
+  --f--2-min: 14.58;
+  --f--2-max: 15.36;
+  --step--2: calc(
+    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+      var(--fluid-bp)
+  );
+  --f--1-min: 17.50;
+  --f--1-max: 19.20;
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
+  --f-0-min: 21.00;
+  --f-0-max: 24.00;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+  --f-1-min: 25.20;
+  --f-1-max: 30.00;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+  --f-2-min: 30.24;
+  --f-2-max: 37.50;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+  --f-3-min: 36.29;
+  --f-3-max: 46.88;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+  --f-4-min: 43.55;
+  --f-4-max: 58.59;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+  --f-5-min: 52.25;
+  --f-5-max: 73.24;
+  --step-5: calc(
+    ((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+      var(--fluid-bp)
+  ); }
+
+h1 {
+  font-size: var(--step-3); }
+
+h2 {
+  font-size: var(--step-1); }
+
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+
+.type--2 {
+  font-size: var(--step--2); }
+
+.type--1 {
+  font-size: var(--step--1); }
+
+.type-0 {
+  font-size: var(--step-0); }
+
+.type-1 {
+  font-size: var(--step-1); }
+
+.type-2 {
+  font-size: var(--step-2); }
+
+.type-3 {
+  font-size: var(--step-3); }
+
+.type-4 {
+  font-size: var(--step-4); }
+
+.type-5 {
+  font-size: var(--step-5); }
+
+.m-3xs {
+  margin: var(--space-3xs); }
+
+.m-2xs {
+  margin: var(--space-2xs); }
+
+.m-xs {
+  margin: var(--space-xs); }
+
+.m-s {
+  margin: var(--space-s); }
+
+.m-m {
+  margin: var(--space-m); }
+
+.m-l {
+  margin: var(--space-l); }
+
+.m-xl {
+  margin: var(--space-xl); }
+
+.m-2xl {
+  margin: var(--space-2xl); }
+
+.m-3xl {
+  margin: var(--space-3xl); }
+
+.mb-3xs {
+  margin-bottom: var(--space-3xs); }
+
+.mb-2xs {
+  margin-bottom: var(--space-2xs); }
+
+.mb-xs {
+  margin-bottom: var(--space-xs); }
+
+.mb-s {
+  margin-bottom: var(--space-s); }
+
+.mb-m {
+  margin-bottom: var(--space-m); }
+
+.mb-l {
+  margin-bottom: var(--space-l); }
+
+.mb-xl {
+  margin-bottom: var(--space-xl); }
+
+.mb-2xl {
+  margin-bottom: var(--space-2xl); }
+
+.mb-3xl {
+  margin-bottom: var(--space-3xl); }
+
+.ml-3xs {
+  margin-left: var(--space-3xs); }
+
+.ml-2xs {
+  margin-left: var(--space-2xs); }
+
+.ml-xs {
+  margin-left: var(--space-xs); }
+
+.ml-s {
+  margin-left: var(--space-s); }
+
+.ml-m {
+  margin-left: var(--space-m); }
+
+.ml-l {
+  margin-left: var(--space-l); }
+
+.ml-xl {
+  margin-left: var(--space-xl); }
+
+.ml-2xl {
+  margin-left: var(--space-2xl); }
+
+.ml-3xl {
+  margin-left: var(--space-3xl); }
+
+.mr-3xs {
+  margin-right: var(--space-3xs); }
+
+.mr-2xs {
+  margin-right: var(--space-2xs); }
+
+.mr-xs {
+  margin-right: var(--space-xs); }
+
+.mr-s {
+  margin-right: var(--space-s); }
+
+.mr-m {
+  margin-right: var(--space-m); }
+
+.mr-l {
+  margin-right: var(--space-l); }
+
+.mr-xl {
+  margin-right: var(--space-xl); }
+
+.mr-2xl {
+  margin-right: var(--space-2xl); }
+
+.mr-3xl {
+  margin-right: var(--space-3xl); }
+
+.mt-3xs {
+  margin-top: var(--space-3xs); }
+
+.mt-2xs {
+  margin-top: var(--space-2xs); }
+
+.mt-xs {
+  margin-top: var(--space-xs); }
+
+.mt-s {
+  margin-top: var(--space-s); }
+
+.mt-m {
+  margin-top: var(--space-m); }
+
+.mt-l {
+  margin-top: var(--space-l); }
+
+.mt-xl {
+  margin-top: var(--space-xl); }
+
+.mt-2xl {
+  margin-top: var(--space-2xl); }
+
+.mt-3xl {
+  margin-top: var(--space-3xl); }
+
+.p-3xs {
+  padding: var(--space-3xs); }
+
+.p-2xs {
+  padding: var(--space-2xs); }
+
+.p-xs {
+  padding: var(--space-xs); }
+
+.p-s {
+  padding: var(--space-s); }
+
+.p-m {
+  padding: var(--space-m); }
+
+.p-l {
+  padding: var(--space-l); }
+
+.p-xl {
+  padding: var(--space-xl); }
+
+.p-2xl {
+  padding: var(--space-2xl); }
+
+.p-3xl {
+  padding: var(--space-3xl); }
+
+.pb-3xs {
+  padding-bottom: var(--space-3xs); }
+
+.pb-2xs {
+  padding-bottom: var(--space-2xs); }
+
+.pb-xs {
+  padding-bottom: var(--space-xs); }
+
+.pb-s {
+  padding-bottom: var(--space-s); }
+
+.pb-m {
+  padding-bottom: var(--space-m); }
+
+.pb-l {
+  padding-bottom: var(--space-l); }
+
+.pb-xl {
+  padding-bottom: var(--space-xl); }
+
+.pb-2xl {
+  padding-bottom: var(--space-2xl); }
+
+.pb-3xl {
+  padding-bottom: var(--space-3xl); }
+
+.pl-3xs {
+  padding-left: var(--space-3xs); }
+
+.pl-2xs {
+  padding-left: var(--space-2xs); }
+
+.pl-xs {
+  padding-left: var(--space-xs); }
+
+.pl-s {
+  padding-left: var(--space-s); }
+
+.pl-m {
+  padding-left: var(--space-m); }
+
+.pl-l {
+  padding-left: var(--space-l); }
+
+.pl-xl {
+  padding-left: var(--space-xl); }
+
+.pl-2xl {
+  padding-left: var(--space-2xl); }
+
+.pl-3xl {
+  padding-left: var(--space-3xl); }
+
+.pr-3xs {
+  padding-right: var(--space-3xs); }
+
+.pr-2xs {
+  padding-right: var(--space-2xs); }
+
+.pr-xs {
+  padding-right: var(--space-xs); }
+
+.pr-s {
+  padding-right: var(--space-s); }
+
+.pr-m {
+  padding-right: var(--space-m); }
+
+.pr-l {
+  padding-right: var(--space-l); }
+
+.pr-xl {
+  padding-right: var(--space-xl); }
+
+.pr-2xl {
+  padding-right: var(--space-2xl); }
+
+.pr-3xl {
+  padding-right: var(--space-3xl); }
+
+.pt-3xs {
+  padding-top: var(--space-3xs); }
+
+.pt-2xs {
+  padding-top: var(--space-2xs); }
+
+.pt-xs {
+  padding-top: var(--space-xs); }
+
+.pt-s {
+  padding-top: var(--space-s); }
+
+.pt-m {
+  padding-top: var(--space-m); }
+
+.pt-l {
+  padding-top: var(--space-l); }
+
+.pt-xl {
+  padding-top: var(--space-xl); }
+
+.pt-2xl {
+  padding-top: var(--space-2xl); }
+
+.pt-3xl {
+  padding-top: var(--space-3xl); }
