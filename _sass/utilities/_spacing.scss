@@ -1,0 +1,34 @@
+// Generates a class for each space scale in $space-scale-map and each rule in
+// $spacing-rules:
+//
+// $space-scale-map: (12: 12px);
+// $spacing-rules: (m: margin, p: padding);
+//
+// .m-12 {
+//   margin: 12px;
+// }
+//
+// .p-12 {
+//   padding: 12px;
+// }
+
+$spacing-rules: (
+  m: margin,
+  mb: margin-bottom,
+  ml: margin-left,
+  mr: margin-right,
+  mt: margin-top,
+  p: padding,
+  pb: padding-bottom,
+  pl: padding-left,
+  pr: padding-right,
+  pt: padding-top
+);
+
+@each $rule-name, $rule in $spacing-rules {
+  @each $scale-name, $value in $space-scale-map {
+    .#{$rule-name}-#{$scale-name} {
+      #{$rule}: #{$value};
+    }
+  }
+}

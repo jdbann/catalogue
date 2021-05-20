@@ -1,0 +1,31 @@
+// Generates a class for each font in $font-map:
+//
+//  $font-map: (comic-sans: "Comic Sans");
+//
+//  .comic-sans {
+//    font-face: "Comic Sans";
+//  }
+
+@each $name, $family in $font-map {
+  .#{$name} {
+    font-family: $family;
+  }
+}
+
+// Generates a class for each type scale in $type-scale-map:
+//
+// $type-scale-map: (12: 12px, 14: 14px);
+//
+// .type-12 {
+//   font-size: 12px;
+// }
+//
+// .type-14 {
+//   font-size: 14px;
+// }
+
+@each $name, $size in $type-scale-map {
+  .type-#{$name} {
+    font-size: #{$size};
+  }
+}

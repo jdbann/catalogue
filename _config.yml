@@ -1,0 +1,11 @@
+title: Demo Catalogue
+email: john@emailaddress.hore
+description: >- # this means to ignore newlines until "baseurl:"
+  A prototype of a personal catalogue.
+baseurl: ""
+url: ""
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

@@ -1,0 +1,45 @@
+// Colors
+
+$color-black: rgba(0, 0, 0, 1);
+$color-white: rgba(255, 255, 255, 1);
+
+$color-map: (
+  black: $color-black,
+  white: $color-white
+);
+
+
+// Fonts
+
+$font-sans-serif: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+"helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+sans-serif;
+
+$font-map: (
+  sans-serif: $font-sans-serif
+);
+
+// Scales
+
+$type-scale-map: (
+  -2: var(--step--2),
+  -1: var(--step--1),
+  0: var(--step-0),
+  1: var(--step-1),
+  2: var(--step-2),
+  3: var(--step-3),
+  4: var(--step-4),
+  5: var(--step-5)
+);
+
+$space-scale-map: (
+  3xs: var(--space-3xs),
+  2xs: var(--space-2xs),
+  xs: var(--space-xs),
+  s: var(--space-s),
+  m: var(--space-m),
+  l: var(--space-l),
+  xl: var(--space-xl),
+  2xl: var(--space-2xl),
+  3xl: var(--space-3xl),
+);
