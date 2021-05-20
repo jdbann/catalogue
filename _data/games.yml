@@ -1,7 +1,9 @@
 ---
 - name: Mörk Borg
   image: "/uploads/upload-e1726104-a8b0-4213-b2c8-67c5b7d218e5.jpg"
-  description: ''
+  description: MÖRK BORG is a pitch-black apocalyptic fantasy RPG about lost souls
+    and fools seeking redemption, forgiveness or the last remaining riches in a bleak
+    and dying world.
 - name: Mausritter
   image: ''
   description: ''
