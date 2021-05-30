@@ -25,5 +25,17 @@ fields:
       schema:
         format: markdown
     label: Description
+  - name: related_games
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: games
+        file: _data/games.yml
+        path: 
+    label: Related Games
 pages:
 - _data/games.yml
